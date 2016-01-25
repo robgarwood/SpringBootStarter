@@ -1,0 +1,28 @@
+<head>
+<script src="scripts/lib/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+<button type="button" onclick="cheese()">Cheese</button>
+<button type="button" onclick="ham()">Ham</button>
+<button type="button" onclick="user()">User</button>
+<script type="text/javascript">
+function cheese() {
+	$.getJSON( 'cheese', function( data ) {
+		$('#bert').text(JSON.stringify(data));
+	});
+}
+function ham() {
+	$.getJSON( 'ham', function( data ) {
+		$('#bert').text(JSON.stringify(data));
+	});
+}
+function user() {
+	$.getJSON( 'user', function( data ) {
+		$('#bert').text(JSON.stringify(data));
+	});
+}
+</script>
+
+<div id="bert">data to go here</div>
+</body>
